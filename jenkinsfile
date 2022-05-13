@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    environment {
+        name = 'Shubham kumar Raj'
+    }
+    parameters {
+        string(name: 'IP', defaultValue: '0.0.0.0', description: "")
+    }
+    stages {
+        
+        stage('Parameters') {
+            steps {
+                sh 'echo "${name}"'
+                sh 'echo  "${IP}"'
+            }
+        }
+    
+    }
+}
